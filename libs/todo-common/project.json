@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/todo-common/src",
+  "prefix": "agent-org",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/todo-common"],
+      "options": {
+        "project": "libs/todo-common/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/todo-common/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/todo-common/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/todo-common"],
+      "options": {
+        "jestConfig": "libs/todo-common/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/todo-common/**/*.ts",
+          "libs/todo-common/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

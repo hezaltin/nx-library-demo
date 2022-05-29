@@ -3,6 +3,9 @@
   "version": 2,
   "projects": {
     "agent-app": "apps/agent-app",
-    "agent-app-e2e": "apps/agent-app-e2e"
+    "agent-app-e2e": "apps/agent-app-e2e",
+    "auth-factor": "libs/auth-factor",
+    "todo-common": "libs/todo-common",
+    "todo-shared": "libs/todo-shared"
   }
 }
